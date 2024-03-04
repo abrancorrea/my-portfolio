@@ -13,6 +13,7 @@ export const getProjects = async () => {
   return client.fetch<IProject[]>(groq`
   *[_type== 'project']{
     _id,
+    _type,
     _createdAt,
     name,
     "slug": slug.current,
