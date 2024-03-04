@@ -3,7 +3,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 import { IAssetImage } from "@/types/Project";
@@ -22,7 +21,7 @@ export const ImageSlider = ({ images, className }: ImageSliderProps) => (
     centeredSlides
   >
     {images.map((image) => (
-      <SwiperSlide key={image.alt}>
+      <SwiperSlide key={image.alt} className="flex items-center justify-center">
         <img alt={image.alt} src={image.url} className={className} />
       </SwiperSlide>
     ))}
